@@ -1,0 +1,35 @@
+a {
+  color: #F79546;
+  text-decoration: none;
+}
+
+.text-danger {
+  color: #F79546;
+}
+.panel-default .panel-heading {
+  background-color: #F79546;
+  color:#FFFFFF;
+}
+.btn-danger {
+  color: #fff !important;
+  background-color: #f79546;
+  border-color: #f79546;
+}
+
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {
+  color: #fff !important;
+  background-color: #f79546;
+  border-color: #f79546;
+}
+.bg-warning {
+  background-color: #F79546;
+  color: #fffefc;
+}
+.btn-primary {
+  color: #fff !important;
+  background-color: #c0d72f;
+  border-color: #c0d72f;
+}

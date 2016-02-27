@@ -1,14 +1,44 @@
-vendor/
-node_modules/
+# Laravel
+/bootstrap/compiled.php
+/vendor
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+# Configuration
+/app/config/local
+/app/config/staging
+/app/config/production
 
-# Laravel 5 & Lumen specific
-bootstrap/cache/
-storage/
-.env.*.php
-.env.php
-.env
-.env.example
+# Basset development collections
+/public/assets/compiled/public
+/public/assets/compiled/admin
+/public/builds
+/public/data
+/public/newassets
+
+# Composer
+composer.phar
+composer.lock
+
+# OS
+.DS_Store
+.idea/
+vagrant
+.vagrant
+
+# Packages
+_ide_helpers.php
+/nbproject/private/
+/public/upload/users/
+/public/upload/
+/public/packages
+/app/storage/debugbar/
+/app/storage/libpng-1.2.5.tar.gz
+
+_release
+/node_modules
+/resources/assets/vendor
+/resources/vendor
+/resources/altair/assets/js/concat_common.js
+/resources/altair/assets/js/concat_common.min.js
+resources/navitas/css/navitas_theme.min.css
+
+resources/navitas/js/custom/datatables_uikit.min.js

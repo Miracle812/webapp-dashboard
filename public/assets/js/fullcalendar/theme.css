@@ -1,0 +1,54 @@
+.fc-widget-header {
+  height: 40px;
+    line-height: 40px;
+  background-color: #fff;
+}
+
+.fc-widget-header .fc-button {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  margin: 0;
+  height: 40px;
+  line-height: 18px;
+  padding: 10px;
+}
+
+.fc-widget-header-title h2 {
+  font-size: 15px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.panel .fc-widget-content {
+  margin: -1px;
+}
+
+.fc-content .fc-widget-header{
+  background-color: #fff;
+}
+
+.fc-content .fc-widget-header,
+.fc-content .fc-widget-content {
+  border-color: #e8e8e8;
+  font-weight: normal;
+}
+
+.fc-widget-content .fc-event {
+    border-color: #e8e8e8;
+
+    padding: 4px 6px;
+}
+
+.fc-event {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+}
+
+.fc-event.bg-white {
+  background-color: #ffffff;
+  color:#898989;
+}

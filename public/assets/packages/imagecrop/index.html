@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery Image Cropper Script</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="icon" href="data:,">
+	<link rel="stylesheet" type="text/css" href="example.css">
+	<link rel="stylesheet" type="text/css" href="crop.css">
+	<script src="jquery.min.js"></script>
+	<script src="crop.js"></script>
+</head>
+
+<body>
+
+	<div class="example">
+
+		<!--
+			NOTE: To change the aspect ratio, look in crop.css
+			The class 'default' links the div to the innit(); function
+		-->
+		<div class="default">
+			<div class="cropMain"></div>
+			<div class="cropSlider"></div>
+			<button class="cropButton">Crop</button>
+		</div>
+
+	</div>
+
+	<script>
+
+		// create new object crop
+		// you may change the "one" variable to anything
+		var one = new CROP();
+
+		// link the .default class to the crop function
+		one.init('.default');
+
+		// load image into crop
+		one.loadImg('img/one.jpg');
+
+		// send coordinates for processing
+		// you may call the coordinates with the function coordinates(one);
+		$(document).on('click', 'button', function() {
+
+			$.ajax({
+				type: "post",
+				dataType: "json",
+				url: "save.php",
+				data: $.param(coordinates(one))
+			})
+			.done(function(data) {
+
+				$('.example .output').remove();
+				$('.example').append('<img src="'+data.url+'" class="output" />')
+				$('.example .output').delay('4000').fadeOut('slow');
+
+			});
+
+		});
+
+	</script>
+
+</body>
+</html>

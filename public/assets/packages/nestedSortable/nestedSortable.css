@@ -1,0 +1,75 @@
+.placeholder {
+    background-color: #cfcfcf;
+    -moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.ui-nestedSortable-error {
+    background:#fbe3e4;
+    color:#8a1f11;
+}
+ol {
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+}
+ol.sortable, ol.sortable ol {
+    margin: 0 0 0 25px;
+    padding: 0;
+    list-style-type: none;
+}
+ol.sortable {
+    margin: 1em 0;
+}
+.sortable li {
+    margin: 7px 0 0 0;
+    padding: 0;
+    position: relative;
+}
+
+
+.sortable li div.handle
+{
+	cursor: move;
+    border: 1px solid #CCC;
+	margin: 0px;
+	padding: 7px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+	
+
+.sortable li div:hover { border-color: #999;  }
+	
+.sortable li .actions
+{
+	display: block;
+	z-index: 10;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	padding: 0px;
+}
+/*
+.sortable li div:hover .actions{ display: block;  }
+*/
+.sortable li .actions a	{
+    display:block;
+    float:left;
+    margin: 2px 0;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+.sortable li .actions a:hover	{
+    background-color: #EBEBEB; 
+    border: 1px solid #CCC;
+}
+.sortable li .actions a img	{
+    display:block;
+}
+
+.sortable li.new div.handle{
+    background-color: #E2FF7D;
+    border: 1px solid #99C600;
+}

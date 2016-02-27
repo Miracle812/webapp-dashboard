@@ -1,0 +1,84 @@
+[{
+	"text":"All Sites",
+	"children":[{
+		"text":"Client 1",
+		"state":"closed",
+		"children":[{
+			"id":111,
+			"text":"Site 1"
+		},{
+			"id":112,
+			"text":"Site 2"
+		},{
+			"id":113,
+			"text":"Site 3"
+		}]
+	},{
+		"text":"Client 2",
+        "state":"closed",
+		"children":[{
+			"id":121,
+            "text":"Site 4"
+		},{
+			"id":122,
+			"text":"Site 5"
+		},{
+			"id":123,
+			"text":"Site 6"
+		},{
+			"id":124,
+            "text":"Site 7"
+		}]
+	},{
+		"text":"Client 3",
+        "state":"closed",
+		"children":[{
+			"id":121,
+			"text":"Site 8"
+		},{
+			"id":122,
+			"text":"Site 9"
+		},{
+			"id":123,
+			"text":"Site 10"
+		},{
+			"id":124,
+			"text":"Site 11"
+		}]
+	},{
+		"text":"Client 4",
+        "state":"closed",
+		"children":[{
+			"id":121,
+			"text":"Site 12"
+		},{
+			"id":122,
+			"text":"Site 13"
+		},{
+			"id":123,
+			"text":"Site 14"
+		},{
+			"id":124,
+			"text":"Site 15"
+		}]
+	},{
+
+		"text":"Client 5",
+        "state":"closed",
+		"children":[{
+			"id":121,
+			"text":"Site 16"
+		},{
+			"id":122,
+			"text":"Site 17"
+		},{
+			"id":123,
+			"text":"Site 18"
+		},{
+			"id":124,
+			"text":"Site 19"
+		}]
+	}
+
+    ]
+}]

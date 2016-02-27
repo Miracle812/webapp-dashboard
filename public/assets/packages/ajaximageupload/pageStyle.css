@@ -1,0 +1,27 @@
+.mainSection
+{
+	width: 960px !important;
+}
+.menu
+{
+	width: 240px !important;
+}
+code
+{
+	font-family: monospace;
+	white-space: nowrap;
+	overflow: auto;
+}
+#IMU0Queue
+{
+	width: auto !important;
+}
+#IMU0Queue .uploadifyQueueItem
+{
+	float: left;
+}
+#IMU0Queue .cancel
+{
+	float: none !important;
+	text-align: right;
+}

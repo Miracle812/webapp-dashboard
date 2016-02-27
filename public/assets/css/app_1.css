@@ -1,0 +1,7 @@
+.text-primary {
+  color: #f69546;
+}
+.panel .table-striped > thead th {
+  background-color: #fdf8e4;
+  border-right: 1px solid #eaeef1;
+}

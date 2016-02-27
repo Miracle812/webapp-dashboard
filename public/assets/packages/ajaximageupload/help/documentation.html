@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>ImageMultiUpload - Help page</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link type="text/css" rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="pageStyle.css" />
+	</head>
+	<body>
+	<div class="mainSection">
+		<div class="header"></div>
+		<div class="center floatContent">
+			<div class="content">
+				<div class="contentHeader">Documentation - aviable parameters</div>
+				<table cellspacing="1px;" cellpadding="0px;" style="background-color: #E1E5E9;">
+				<tr>
+					<th>Parameter</th>
+					<th style="width: 100px;">Possible values</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>path</td>
+					<td>-</td>
+					<td>The path to the folder you would like to save the files to. End's with '/'</td>
+				</tr>
+				<tr>
+					<td>startOn</td>
+					<td>auto<br />manually<br />onSubmit:<i>formId</i></td>
+					<td>If set to auto, files will be uploaded on select. If set to manually, files will be uploaded after click on upload button. If set to onSubmit, files will be uploaded when the form with given id (after ':') will be submited.</td>
+				</tr>
+				<tr>
+					<td>ajax</td>
+					<td>true<br />false</td>
+					<td>
+						Can be used only, if <i>startOn</i> is set to <i>onSubmit:formId</i>. When <i>ajax</i> is set to <i>true</i>, form data will be send via ajax to script specified in form action parameter, using method (post or get) specified in form method parameter.
+					</td>
+
+				</tr>
+				<tr>
+					<td>ajaxInfoId</td>
+					<td>-</td>
+					<td>
+						Can be used only, if <i>ajax</i> is set to <i>true</i>. Specified html node id where information outputted by script specified in form action parameter will be placed. So for example if you place in your php script (which submitted form) echo $message; the message will be placed in html node with <i>ajaxInfoId</i> id parameter.
+					</td>
+
+				</tr>
+				<tr>
+					<td>ajaxLoaderId</td>
+					<td>-</td>
+					<td>
+						Can be used only, if <i>ajax</i> is set to <i>true</i>. Specified html node id which contains loader graphic. This node will be show before sending ajax request and will be hidden after getting response. Sample loader node can look like this:
+						&lt;span class="imu_loader" id="loader"&gt;<br />
+
+							&nbsp;&nbsp;&nbsp;&lt;img src='ajax-loader.gif'/&gt;<br />
+						&lt;/span&gt;<br />
+						To make it work use <i>ajaxLoaderId='loader'</i>
+					</td>
+				</tr>
+				<tr>
+					<td>buttonCaption</td>
+					<td>-</td>
+					<td>Upload button caption. Specify just if you use startOn="manually"</td>
+				</tr>
+				<tr>
+					<td>multi</td>
+					<td>true<br />false</td>
+					<td><i>true</i> - multiple file uploads,<br /><i>false</i> - one file upload</td>
+				</tr>
+				<tr>
+					<td>afterUpload</td>
+					<td>image<br />link<br />filename<br /><i>custom text</i></td>
+					<td>
+						Specified what's appears after upload.<br />
+						image - preview of uploaded file will be displayed,<br />
+						link - link to the uploaded file will be displayed,<br />
+						filename - the name of the uploaded file will be displayed,<br />
+						<i>custom text</i> - your custom text will be displayed (by example afterUploade="Upload complete!")<br />
+						If you specify <i>custom text</i>, you can use predefined variables to display some statistics:<br />
+						<ul>
+							<li>IMUfilesUploaded - number of uploaded files</li>
+							<li>IMUerrors - number of occured errors</li>
+							<li>IMUtotalSizeB - total size of all uploaded files in bytes</li>
+							<li>IMUtotalSizeKB - total size of all uploaded files in kilobytes</li>
+							<li>IMUtotalSizeMB - total size of all uploaded files in megabytes</li>
+							<li>IMUtotalSizeGB - total size of all uploaded files in gigabytes</li>
+							<li>IMUspeedB - avarage upload speed in bytes per second</li>
+							<li>IMUspeedKB - avarage upload speed in kilobytes per second</li>
+							<li>IMUspeedMB - avarage upload speed in megabytes per second</li>
+							<li>IMUspeedGB - avarage upload speed in gigabytes per second</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>onprogress</td>
+					<td>percentage<br />speed</td>
+					<td>Specified type of information displayed when file is uploaded.<br /><i>percentage</i> - displayed percentage part of uploaded file,<br /> <i>speed</i> - displayed avarage speed of upload in kB/s
+					</td>
+
+				</tr>
+				<tr>
+					<td>thumbnails</td>
+					<td>-</td>
+					<td>Dimension or dimensions of thumbnails that will be generated (in pixels).<br />By example if you want to generate a 90x90 thumbnail use thumbnails="90x90".<br />If you want to generate 3 thumbnails (first - 90x90, second - width 100px, heigth - keep aspect ratio, third - height 200px, width - keep aspect ratio) use thumbnails="90x90,100x,x200".</td>
+				</tr>
+				<tr>
+					<td>thumbnailsFolders</td>
+					<td>-</td>
+					<td>Paths to folders, where generated thumbnails will be placed. If you not specify this attribute, thumbnails will be placed in upload directory (specified by path parameter). If you specified by example 2 paths and you will generate 3 thumbnails, the first 2 thumbnails will be placed in specified foledrs, third thumbnail will be placed in upload folder (specified by path parameter).<br />
+					<i>Notice:</i> Thumbnails will be created with predefinied names (you can change them in upload.php file). First thumbnail will get thumb0_<i>filename</i> name, second will get thumb1_<i>filename</i> etc.</td>
+				</tr>
+				<tr>
+					<td>fileExt</td>
+					<td>-</td>
+					<td>
+						List of allowed file extensions, eg. fileExt="jpg,png,gif".<br />
+						<i>Notice:</i> If you're using this parameter, you should also specify fileDesc parameter.
+					</td>
+				</tr>
+				<tr>
+					<td>fileDesc</td>
+					<td>-</td>
+					<td>
+						The text that will appear at the bottom of the browse dialog box, eg. fileDesc="Images (jpg, png, gif)".
+					</td>
+				</tr>
+				<tr>
+					<td>thumbnailsAfterUpload</td>
+					<td>image<br />link<br />filename<br /><i>custom text</i></td>
+					<td>
+						Specified what's appears after thumbnails generation.<br />
+						image - preview of thumbnail will be displayed,<br />
+						link - link to the thumbnail will be displayed,<br />
+						filename - the name of the thumbnail will be displayed,<br />
+						<i>custom text</i> - your custom text will be displayed.<br />
+						This parameter should be used like thumbnails parameter, by example (for 3 thumbnails) thumbnailsAfterUpload="link,image,Thumbnail created!".<br />
+						If you're not gonna specify this parameter, the thumbnails information/image will not be displayed.
+					</td>
+				</tr>
+				<tr>
+					<td>maxSize</td>
+					<td>-</td>
+					<td>The maximum upload file size in bytes.</td>
+				</tr>
+				<tr>
+					<td>hideButton</td>
+					<td>true<br />false</td>
+					<td>
+						Enable to hide the flash button so you can style the underlying div element from your custom css (by for example background: url('your_button.png') no-repeat; parameter).
+					</td>
+				</tr>
+				<tr>
+					<td>button</td>
+					<td>-</td>
+					<td>Path to custom upload button.</td>
+				</tr>
+				<tr>
+					<td>bwidth</td>
+					<td>-</td>
+					<td>Custom upload button width in pixels.</td>
+				</tr>
+				<tr>
+					<td>bheight</td>
+					<td>-</td>
+					<td>Custom upload button height in pixels.</td>
+				</tr>
+				<tr>
+					<td>buttonText</td>
+					<td>-</td>
+					<td>
+						Caption of browse files button.
+					</td>
+				</tr>
+				<tr>
+					<td>queueId</td>
+					<td>-</td>
+					<td>The id of the custom upload queue. You can use your own upload queue, rather than default queue. Just create own queue and specify it's id. The files will be show in your custom queue.</td>
+				</tr>
+				<tr>
+					<td>data</td>
+					<td>-</td>
+					<td>Custom data, that will be send to upload.php script. Data can be in json format or can contain jQuery dom element selectors from which value will be taken.<br />
+						By example data="'variable1':'value1', 'variable2':'value2', 'formInput':'selector:[name=firstInput]', 'otherInput':'selector:#someId'".<br />
+						<strong>WATERMARKS:</strong><br/>
+						Watermarks configuration should be passed through data parameter.<br /><br />
+						<strong>Example 1</strong> - two image watermarks (first image1.jpg distant 10px from bottom and 5px from right, second image2.jpg distant 0px from bottom and 20px from right):<br />
+						<br />
+						data="'watermark_path0':'image1.jpg','watermark_bottom0':'10','watermark_right0':'5',<br />'watermark_path1':'image2.jpg','watermark_bottom1':'0','watermark_right1':'20'"<br /><br />
+						<strong>Example 2</strong> - one text watermark (text - "sample text", width - 100%, height - 40px, background color - #000000, text color - #ffffff, background transparency - 60%, text transparency - 0%, font - arial.ttf, font size - 14px, text distant from left - 10px, text distant from top - 25px, background distant from bottom - 0px, background distant from right - 0px):<br />
+						<br />
+						data="'text_watermark_text0':'sample text','text_watermark_width0':'100p',<br />'text_watermark_height0':'40','text_watermark_background_color0':'#000000',<br />'text_watermark_text_color0':'#ffffff','text_watermark_bg_transparency0':'60',<br />'text_watermark_text_transparency0':'0','text_watermark_font0':'arial.ttf',<br />'text_watermark_font_size0':'14','text_watermark_text_x0':'10',<br />'text_watermark_text_y0':'25','text_watermark_right0':'0','text_watermark_bottom0':'0'"<br /><br />
+						You can also use 2 additional parameters:<br />
+						-watermark_thumbnails,<br />
+						-text_watermark_thumbnails<br />
+						<br />Above parameters decides if watermarks should be applied also to thumbnails (if you will create any).<br /><br /><strong>Example 3</strong><br/><br />
+						data="'watermark_path0':'image1.jpg','watermark_bottom0':'10','watermark_right0':'5',<br />'watermark_path1':'image2.jpg','watermark_bottom1':'0','watermark_right1':'20',<br />'watermark_thumbnails':'1'"<br /><br />
+					</td>
+				</tr>
+				<tr>
+					<td>method</td>
+					<td>post<br />get</td>
+					<td>
+						Specified the method used to send data to upload script. 
+					</td>
+				</tr>
+				<tr>
+					<td>filesLimit</td>
+					<td>-</td>
+					<td>Number value of maximum files that can be selected to upload.
+					</td>
+				</tr>
+				<tr>
+					<td>allowRemove</td>
+					<td>true<br />false</td>
+					<td><i>true</i> - user can remove file after upload, <i>false</i> - user can't remove file after upload.<br /><i>Notice:</i>If you set this parameter to <i>true</i> and using custom value of <i>path</i> parameter (different than "files/"), you've got to change default "files" folder value in upload.php file (lines 59, 60, 62) to your custom folder name/path.
+					</td>
+				</tr>
+				<tr>
+					<td>removeData</td>
+					<td>-</td>
+					<td>Custom data, that will be send using POST method to upload.php script, when user click on remove button (available when parameter allowRemove is set to true). Data can be in json format or can contain jQuery dom element selectors from which value will be taken.<br />
+						For example: removeData="'variable1':'value1', 'variable2':'value2', 'formInput':'selector:[name=firstInput]', 'otherInput':'selector:#someId'".
+					</td>
+				</tr>
+				<tr>
+					<td>sessionId</td>
+					<td>-</td>
+					<td>If you want to use session in upload.php scirpt, you've got to specify this parameter. By example sessionId="<?php echo session_id(); ?>". (Check <a href="how_to_pass_session.html">how_to_pass_session.html</a> source.)
+					</td>
+				</tr>
+				<tr>
+					<td>uploadScript</td>
+					<td>-</td>
+					<td>The path to upload script. By default is set to upload.php.
+					</td>
+				</tr>
+				<tr>
+					<td>wmode</td>
+					<td>-</td>
+					<td>Set's flash wmode parameter. By default is set to transparent.
+					</td>
+				</tr>
+				</table>
+			</div>
+			<div class="menu">
+				<a href="about.html" title="about" class="menu">about</a>
+				<a href="implementation.html" title="implementation" class="menu">implementation</a>
+				<a href="documentation.html" title="documentation" class="menu">documentation</a>
+				<a href="cssFile.html" title="CSS file" class="menu">CSS file</a>
+				<a href="examples.html" title="examples" class="menu">examples</a>
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+</body>
+</html>

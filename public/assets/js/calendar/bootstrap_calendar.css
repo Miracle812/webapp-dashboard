@@ -1,0 +1,88 @@
+.xcalendar{
+}
+.xcalendar a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.xcalendar td{
+    text-align: center;
+    border:none !important;
+    padding: 0 !important;
+}
+.xcalendar .header td.year{
+    width: 72%;
+}
+
+.xcalendar .header i{
+    font-size: 14px;
+    padding: 10px 0;
+    display: inline-block;
+    cursor: pointer;
+}
+.xcalendar .prev_month{
+    float: left;
+}
+.xcalendar .next_month{
+    float: right;
+}
+.xcalendar .year{
+    text-align: center;
+    font-weight: 500;
+}
+.xcalendar .week_days{
+    font-weight: 500;
+}
+.xcalendar .table{
+    margin: 0;
+}
+.xcalendar .table td{
+    position: relative;
+    padding: 0;
+    border: none;
+}
+
+.xcalendar .table td.event a{
+    border:1px solid rgba(255,255,255,.2);
+    background-color: rgba(0,0,0,.05);
+    border-radius: 30px;
+}
+
+.xcalendar .table td.event a:hover{
+    background-color: rgba(0,0,0,.15);
+}
+
+.xcalendar .table td a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 27px;
+}
+.xcalendar .table td span{
+    border-radius: 10px;
+    bottom: 25px;
+    color: red;
+    display: inline-block;
+    font-size: 10px;
+    height: 6px;
+    left: 85%;
+    margin-left: -2px;
+    position: absolute;
+}
+.xcalendar .week_days td{
+}
+.xcalendar .visualmonthyear {
+}
+.noborder, .noborder .xcalendar, .noborder .xcalendar * {
+    border: none !important;
+}
+.dropdown-menu .xcalendar td a {
+    padding: 0px;
+}
+
+.xcalendar .popover, .xcalendar .popover a{
+    color: #666 !important;
+}
+
+.xcalendar .popover .popover-title{
+    white-space: nowrap;
+}
