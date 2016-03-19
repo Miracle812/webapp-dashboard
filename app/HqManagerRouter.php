@@ -38,7 +38,6 @@ Route::group(array('namespace' => 'Sections\HqManagers', 'before' => 'auth|detec
         Route::get ('/send-access-url/{id}',         $ctrl.'@getSendAccessEmail');
         Route::get ('/delete/{id}',                  $ctrl.'@getDelete');
         Route::get ('/',                             $ctrl.'@getIndex');
-
     });
 
     Route::group(array('prefix' => 'index'), function()
