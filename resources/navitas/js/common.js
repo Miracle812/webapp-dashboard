@@ -117,7 +117,7 @@ $( document ).ready( function(){
     });
 
     // Ajax Toggle Activation/Deactivation
-    $( document ).on( 'click', '[data-toggle=ajaxActivate]', function( e ) { 
+    $( document ).on( 'click', '[data-toggle=ajaxActivate]', function( e ) {
         e.preventDefault();
         $this = $(this);
         url = $this.attr('href') ? $this.attr('href') : $this.data('remote');
@@ -283,7 +283,7 @@ $( document ).ready( function(){
     $.fn.updateNestable = function() {
         var $list = $( this );
         var url = $list.data( 'url' );
-        var nestable = $list.data('nestable'); //UIkit.nestable( $list );
+        var nestable = $list.data('nestable');
         if ( JSON ) {
             var output = JSON.stringify( nestable.serialize() );
             $.ajax({
