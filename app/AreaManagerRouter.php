@@ -20,7 +20,6 @@ Route::group(array('namespace' => 'Sections\AreaManagers', 'before' => 'auth|det
         Route::post('/edit/general',                    $ctrl.'@postEditGeneral');
     });
 
-
     Route::group(array('prefix' => 'headquarter'), function()
     {
         $ctrl = 'Headquarter';
@@ -148,7 +147,6 @@ Route::group(array('namespace' => 'Sections\AreaManagers', 'before' => 'auth|det
         Route::get ('/datatable',                    $ctrl.'@getDatatable');
     });
 
-
     //**** Us Navitas as ****//
     Route::group(array('prefix' => 'usenavitas'), function()
     {
@@ -156,7 +154,9 @@ Route::group(array('namespace' => 'Sections\AreaManagers', 'before' => 'auth|det
         Route::controller('/',                  $ctrl);
         //Route::get ('/',                             $ctrl.'@getIndex');
     });
+
     Route::get('/percent-compliant-data','Index@getPercentCompliantData');
     Route::controller('/units-map',         'UnitsMap');
     Route::controller('/',                  'Index');
+
 });

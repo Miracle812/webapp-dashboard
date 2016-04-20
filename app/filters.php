@@ -262,10 +262,6 @@ Route::filter('api_pods_auth', function($route,$request,$namespace,$ver,$sub=nul
 
 
 
-
-
-
-
 Route::filter('decryption_valid', function()
 {
     $hash = Route::input('hash');
@@ -334,11 +330,6 @@ function checkAuthExceptions($exceptions){
 function setClientTimezone()
 {
     $timezone = Config::get('app.timezone');
-    //if(Auth::check()){
-    //    $timezone = Auth::user()->timezone;
-    // }
-    //Config::set('app.timezone', $timezone);
-    //date_default_timezone_set($timezone);
 }
 
 Route::filter('RefreshToken', function($route, $request, $response)
