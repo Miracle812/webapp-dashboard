@@ -387,15 +387,6 @@ Route::group(array('namespace' => 'Sections\LocalManagers', 'before' => 'auth|de
 
         Route::get ('/',                                $ctrl.'@getIndex');
 
-
-//area
-
-//group
-
-        //Route::get ('/details/{group}/{date?}',         $ctrl.'@getDeviceDetails') -> where('date', 'last-100|today|this-week|this-month|last-month|this-year') -> where('group', 'freezers|fridges|probes');
-        //Route::get ('/datatable',                       $ctrl.'@getTemperatures');
-
-
     });
 
     Route::group(array('prefix' => 'navinotes'), function()
